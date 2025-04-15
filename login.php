@@ -226,8 +226,9 @@
             <button type="submit" class="login-btn">LOGIN</button>
         </form>
         
-        <a href="register.php" class="signup-link">Don't have account? Sign Up</a>
-        
+        <!-- ✅ Fixed Sign Up Link -->
+        <a href="signup.php" class="signup-link">Don't have account? Sign Up</a>
+
         <!-- Admin login button -->
         <form action="admin_login.php" method="GET">
             <button type="submit" class="admin-login-btn">Admin Login</button>
@@ -241,17 +242,14 @@
             const eyeIcon = document.getElementById('eyeIcon');
             
             togglePassword.addEventListener('click', function() {
-                // Toggle the password field type
                 if (password.type === 'password') {
                     password.type = 'text';
-                    // Change to "eye-off" icon
                     eyeIcon.innerHTML = ` 
                         <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
                         <line x1="1" y1="1" x2="23" y2="23"></line>
                     `;
                 } else {
                     password.type = 'password';
-                    // Change back to regular "eye" icon
                     eyeIcon.innerHTML = `
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
